@@ -1,0 +1,8 @@
+<template name="fbAuth">
+  {{#if fbAuthenticated}}
+  {{else}}
+    <p class='lead'>
+      <button class="btn btn-lg btn-default" onclick="FB.login(function(response) {},{scope:'user_likes'});">Login with Facebook</button>
+    </p>
+  {{/if}}
+</template>
