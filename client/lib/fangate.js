@@ -104,6 +104,7 @@ FacebookFangate = function(params) {
      * Listen on user login
      */
     self.fbInstance.Event.subscribe('auth.authResponseChange', function(response) {
+        console.log('this worked')
         self.debug(response, "auth.login");
 
         if (typeof(response.status) != "undefined" && response.status == "connected") {

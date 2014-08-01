@@ -1,5 +1,5 @@
 Template.fbAuth.helpers({
   fbAuthenticated: function () {
-    return Session.get('fbAuthenticated');
+    return Session.get('fbAuthStatus') === 'connected';
   }
 });

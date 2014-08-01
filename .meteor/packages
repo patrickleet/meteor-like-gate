@@ -7,6 +7,4 @@ standard-app-packages
 autopublish
 insecure
 facebook-sdk
-accounts-ui
-accounts-facebook
 bootstrap-3
