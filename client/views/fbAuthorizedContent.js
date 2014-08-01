@@ -1,4 +1,4 @@
-Template.fbAuth.helpers({
+Template.fbAuthorizedContent.helpers({
   fbAuthenticated: function () {
     return Session.get('fbAuthStatus') === 'connected';
   }

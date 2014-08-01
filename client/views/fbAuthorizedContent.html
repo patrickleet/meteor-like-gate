@@ -1,6 +1,7 @@
-<template name="fbAuth">
+<template name="fbAuthorizedContent">
   {{#if fbAuthenticated}}
     {{> likeButtons}}
+    {{> likeGate}}
   {{else}}
     <p class='lead'>
       <button class="btn btn-lg btn-default btn-facebook" onclick="FB.login(function(response) {},{scope:'user_likes'});">

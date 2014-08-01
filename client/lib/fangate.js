@@ -104,16 +104,18 @@ FacebookFangate = function(params) {
      * Listen on user login
      */
     self.fbInstance.Event.subscribe('auth.authResponseChange', function(response) {
-        console.log('this worked')
         self.debug(response, "auth.login");
 
         if (typeof(response.status) != "undefined" && response.status == "connected") {
+            Session.set('fbAuthStatus', response.status);
             // check for user_likes permission
             self.hasPermission("user_likes", function(has) {
                 // only check for likes if user has this permission
                 if (has)
                     self.checkLike();
             });
+        } else {
+            Session.set('fbAuthStatus', false);
         }
     });
 
